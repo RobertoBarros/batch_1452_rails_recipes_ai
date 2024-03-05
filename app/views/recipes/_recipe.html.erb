@@ -1,0 +1,19 @@
+<div id="<%= dom_id recipe %>">
+  <p>
+    <strong>Name:</strong>
+    <%= recipe.name %>
+  </p>
+
+  <p>
+    <strong>Ingredients:</strong>
+    <%= recipe.ingredients %>
+  </p>
+
+  <p>
+    <%= recipe.content %>
+  </p>
+
+  <%= cl_image_tag(recipe.photo.key, alt: "AI-generated image of the recipe", width: 256, height: 256, crop: :fill)  if recipe.photo.attached? %>
+
+
+</div>
